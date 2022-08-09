@@ -10,13 +10,13 @@ import { ServiceService } from 'src/app/Service/service.service';
 })
 export class CalisComponent implements OnInit {
 
-  usuarios:usuario[]=[];
+  usuarios:any[]=[];
   constructor(private service:ServiceService, private router:Router) { }
   
   ngOnInit(){
     this.service.getUsuario()
-    .subscribe(data => {
-      this.usuarios=data;
+    .subscribe((data: any) => {
+      this.usuarios=data['_embedded']['usuarios'];
     })
   }
   }
