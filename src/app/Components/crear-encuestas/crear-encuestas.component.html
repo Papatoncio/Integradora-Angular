@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Survey-Home</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surver-Home</title>
+</head>
+<body>
+    <form action="">
+        <header class="Header">Survey-Home</header>
+        <div>
+            <h1>Área de Trabajo</h1>
+        </div>
+        <div>
+            <a href="" class="Iconos"><img src="../assets/User_Icon.png"></a>
+            <a href="" class="Iconos"><img src="../assets/Cloud_Icon.png"></a>
+        </div>
+        <div>
+            <a href="Creacion_Encuestas.html" class="Pestañas" id="PestañaSel">Creación de Encuestas</a>
+            <a href="Encuestas_Realizadas.html" class="Pestañas">Encuestas Realizadas</a>
+        </div>
+        <div>
+            <p class="Subtitulos">Creación de Encuestas</p>
+        </div>
+        <div id="Datos_Enc">
+            <div class="Campos_Enc">
+                <input [(ngModel)]="encuesta.nombreEncuesta" type="text" name="nombre" placeholder="nombre" required/>
+            </div>
+            <div class="Campos_Enc">
+                <input [(ngModel)]="encuesta.fechaCreacion" type="date" name="fechaCreac" placeholder="Fecha" required/>
+            </div>
+            <div class="Campos_Enc">
+                <input [(ngModel)]="profesor.pregunta" type="text" name="pregunta" placeholder="nombre" required/>
+            </div>
+        </div>
+            <button (click)="Guardar(profesor)" class="Botones">Guardar Pregunta</button>
+            <button (click)="Crear(encuesta)" class="Botones1">Crear Encuesta</button>
+    </form>
+</body>
+</html>

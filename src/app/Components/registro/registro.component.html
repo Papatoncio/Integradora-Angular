@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"/>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://kit.fontawesome.com/cf85ee7414.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+  </head>
+  <body>
+    <!--Titulo de la Pagina-->
+    <div id="titulo">
+      <h1>Surveys</h1>
+    </div>
+    <div id="subtitulo">
+      <h2>Registro</h2>
+    </div>
+    <div>
+      <i class="fa-solid fa-id-card fa-3x" id="iconoR"></i>
+    </div>
+    <form id="formulario">
+      <div>
+        <input [(ngModel)]="usuario.nombre" type="text" name="nombre" placeholder="Nombre Completo" required/>
+      </div>
+      <div>
+        <input [(ngModel)]="usuario.matricula" type="number" name="matricula" placeholder="Matricula" required/>
+      </div>
+      <div>
+        <input [(ngModel)]="usuario.fechaNacimiento" type="date" name="fecha_nacimiento" required/>
+      </div>
+      <div>
+        <input [(ngModel)]="usuario.sexo" type="text" name="sexo" placeholder="Sexo" required/>
+      </div>
+      <div>
+        <input [(ngModel)]="usuario.password" type="text" name="password" placeholder="Contraseña" required />
+      </div>
+      <button (click)="Registrar(usuario)">Registrar</button>
+    </form>
+  </body>
+</html>

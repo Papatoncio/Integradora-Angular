@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey-Home</title>
+</head>
+<body>
+    <form action="">
+        <header class="Header">Survey-Home</header>
+        <div>
+            <h1>Área de Trabajo</h1>
+        </div>
+        <div>
+            <a href="" class="Iconos"><img src="../assets/User_Icon.png"></a>
+            <a href="" class="Iconos"><img src="../assets/Cloud_Icon.png"></a>
+        </div>
+        <div>
+            <a href="Creacion_Encuestas.html" class="Pestañas">Creación de Encuestas</a>
+            <a href="Encuestas_Realizadas.html" class="Pestañas" id="PestañaSel">Encuestas Realizadas</a>
+        </div>
+        <div>
+            <p class="Subtitulos">Tus Encuestas</p>
+        </div>
+        <div class="BloqueEnc">
+            <thead>
+                <tr class="text-center">
+                    <th>NumEncuesta</th>
+                    <th>Nombre</th>
+                    <th>Cuatrimestre</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let encuesta of encuestas" class="text-center">
+                  <td>{{encuesta.idEncuesta}}</td>
+                  <td>{{encuesta.nombreEncuesta}}</td>
+                  <td>{{encuesta.fechaCreacion}}</td>
+                  <td>
+                    <button  class="btn btn-warning">Editar</button>
+                    <button  class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+        </div>
+        <div class="album py-5 bg-light">
+            <div class="container">
+        
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <tr *ngFor="let encuesta of encuestas">
+                  <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                    <div class="card-body">
+                          <td>{{encuesta.nombreEncuesta}}</td>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+            </div>
+            
+    </form>
+</body>
+</html>
